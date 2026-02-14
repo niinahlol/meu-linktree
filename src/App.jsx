@@ -1,61 +1,49 @@
-import React from 'react';
+import React from 'react'
 
 function App() {
-  // Aqui você pode adicionar seus links reais depois!
   const links = [
+    { name: 'Portfolio: Landing Page Pet Shop 🐾', url: 'https://petshop-landing-azure.vercel.app/', icon: '🐶' },
     { name: 'Meu Portfólio: Card de Ração', url: 'https://card-racao.vercel.app/', icon: '🐾' },
     { name: 'GitHub Professional', url: 'https://github.com/niinahlol', icon: '💻' },
-    { 
-    name: 'E-mail para Contato', 
-    url: 'mailto:seuemail@gmail.com', // O "mailto:" é o segredo!
-    icon: '✉️' 
-  },
-    { name: 'Instagram Designer', url: 'https://www.instagram.com/abarbzdesign', icon: '🎨' },
+    { name: 'E-mail para Contato', url: 'mailto:anabmoliveira02@gmail.com', icon: '✉️' },
   ];
-  <LinkButton 
-  titulo="Portfolio: Landing Page Pet Shop 🐾" 
-  url="https://petshop-landing-azure.vercel.app/" 
-  destaque={true} 
-/>
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex flex-col items-center py-16 px-4">
-      {/* Foto de Perfil / Avatar */}
-      <div className="w-24 h-24 bg-gradient-to-tr from-orange-500 to-yellow-400 rounded-full mb-4 shadow-lg shadow-orange-500/20 flex items-center justify-center text-3xl">
-        👩‍💻
+    <div className="min-h-screen bg-zinc-900 flex flex-col items-center p-8 font-sans">
+      {/* Avatar e Perfil */}
+      <div className="flex flex-col items-center mb-8">
+        <div className="w-24 h-24 bg-orange-500 rounded-full mb-4 flex items-center justify-center text-4xl shadow-lg border-4 border-zinc-800">
+          👩‍💻
+        </div>
+        <h1 className="text-white text-2xl font-black tracking-tight">Niina Dev</h1>
+        <p className="text-zinc-400 text-sm font-medium">Design & Front-end Developer</p>
       </div>
-
-      {/* Nome e Bio */}
-      <h1 className="text-white text-2xl font-bold mb-2">Ana Oliveira</h1>
-      <p className="text-zinc-400 text-center max-w-xs mb-8">
-       Design que comunica, código que resolve. 🚀 | React & Tailwind Enthusiast 🚀
-      </p>
 
       {/* Lista de Links */}
       <div className="w-full max-w-md space-y-4">
         {links.map((link, index) => (
-          <a
+          <a 
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between bg-zinc-900 border border-zinc-800 p-4 rounded-2xl hover:bg-orange-500 hover:border-orange-400 transition-all duration-300 shadow-sm"
+            className="flex items-center justify-between w-full bg-zinc-800 p-5 rounded-2xl shadow-xl hover:bg-zinc-700 hover:scale-[1.02] transition-all border border-zinc-700 group"
           >
-            <span className="text-lg">{link.icon}</span>
-            <span className="text-zinc-200 font-medium group-hover:text-white transition-colors">
+            <span className="text-xl">{link.icon}</span>
+            <span className="text-white font-bold group-hover:text-orange-400 transition-colors">
               {link.name}
             </span>
-            <span className="text-zinc-600 group-hover:text-orange-200">→</span>
+            <span className="text-zinc-500 text-xs">→</span>
           </a>
         ))}
       </div>
 
-      {/* Rodapé humilde */}
-      <footer className="mt-auto pt-10 text-zinc-600 text-sm">
-        Criado com React + Tailwind v4 por uma desenvolvedora em processo de aprendizagem!
-      </footer>
+      {/* Footerzinho profissional */}
+      <p className="mt-auto pt-10 text-zinc-500 text-[10px] uppercase tracking-widest font-bold">
+        Nova Friburgo • 2026
+      </p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
