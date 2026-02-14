@@ -5,7 +5,11 @@ function App() {
   const links = [
     { name: 'Meu Portfólio: Card de Ração', url: 'https://card-racao.vercel.app/', icon: '🐾' },
     { name: 'GitHub Professional', url: 'https://github.com/niinahlol', icon: '💻' },
-    { name: 'E-mail para Contato', url: 'anabmoliveira02@gmail.com', icon: '✉️' },
+    { 
+    name: 'E-mail para Contato', 
+    url: 'mailto:seuemail@gmail.com', // O "mailto:" é o segredo!
+    icon: '✉️' 
+  },
     { name: 'Instagram Designer', url: 'https://www.instagram.com/abarbzdesign', icon: '🎨' },
   ];
 
