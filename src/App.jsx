@@ -12,6 +12,11 @@ function App() {
   },
     { name: 'Instagram Designer', url: 'https://www.instagram.com/abarbzdesign', icon: '🎨' },
   ];
+  <LinkButton 
+  titulo="Portfolio: Landing Page Pet Shop 🐾" 
+  url="https://petshop-landing-azure.vercel.app/" 
+  destaque={true} 
+/>
 
   return (
     <div className="min-h-screen bg-zinc-950 flex flex-col items-center py-16 px-4">
